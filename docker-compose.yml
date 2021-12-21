@@ -31,7 +31,7 @@ services:
       - "22:22/tcp"
   wifi-connect:
     build: ./wifi-connect
-    restart: always
+    restart: unless-stopped
     network_mode: host
     privileged: true
     labels:
